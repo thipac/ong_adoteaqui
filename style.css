@@ -1,24 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
 * {
     margin: 0;
     padding: 0;
     font-weight: bolder;
+    box-sizing: border-box;
 }
 
-body {
+:root {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    --color-background: #F7B267;
+    --color-primary: #F4845F;
+    --default-padding: 1rem;
+    color: var(--color-copy);
 }
 
 .container {
-    position: fixed;
-    display: flex;
     
+    display: flex;
     align-items: center;
-    background-color: #F0E6EF;
     width: 100%;
     justify-content: space-between;
-    color: #F0A6CA;
+    color: #F4845F;
+    background-color: #F7B267;
+    height: 7.75rem;
     
 }
 
@@ -28,15 +36,17 @@ body {
     margin-left: 100px;
     text-transform: uppercase;
     font-weight: 300;
+    letter-spacing: .1rem;
 }
 
 .logo:hover {
     font-size: 30px;
 }
-
+ 
 .detalhe__logo {
-    color: #B8BEDD;
+    color: #F25C54;
 }
+
 
 .container__menu {
     margin-right: 150px;
@@ -48,16 +58,17 @@ body {
     flex-direction: row;
     list-style: none;
     margin: 3px;
+    font-size: 1.250rem;
 }
 
 .menu a {
     text-decoration: none;
-    color: #9C89B8;
+    color: #F4845F;
     font-weight: 700;
 }
 
 .menu a:hover {
-    color: #B8BEDD;
+    color: #F25C54;
     border-radius: 10px;
 }
 
@@ -65,12 +76,86 @@ body {
     margin: 30px;
 }
 
-@media (max-width:700px) {
-    .logo {
-        display: none;
-    }
-    .menu {
+#slider {
+    background-color: #F7B267;
+    color: var(--color-primary);
+}
+
+.slide {
+    position: relative;
+    height: calc(96vh - 7.75rem);
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.9;
+}
+
+.slide__copy {
+    position: absolute;
+    top: 10rem;
+    left: 60vw;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #F25C54;
+    margin-right: 5px;
+}
+
+.slide__copy h2 {
+    color: #F4845F;
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 0.1rem ;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+.slide__copy p {
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+}
+
+.rodape {
+    background-color: #F7B267;
+}
+
+.logo__rodape {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #F25C54;
+}
+
+@media screen and (max-width:700px) {
+
+.logo {
+    display: none;
+}
+
+.menu {
         display: flex;
         flex-direction: column;
     }
+
+.menu li {
+    margin: 0;
+}
+
+.slide__copy{
+    inset: absolute;
+    bottom: auto;
+    left: auto;
+    color: #fff;
+}
+
+.logo__rodape {
+    margin: 0;
+    font-size: 10px;
 }
