@@ -160,22 +160,93 @@
     justify-content: center;
     color: #F7B267;
     text-transform: uppercase;
-    font-size: max(24);
+    font-size: max(16px, 2vw);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
 }
 
+.amigos ul{
+
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;    
+}
+
+.amigos img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    padding: 2rem;
+    
+}
+
+.amigos img:hover {
+    max-width: 350px;
+    max-height: 350px;
+    box-shadow: 0 1rem 1rem #0006; 
+    border-radius: 50%;
+    background-color: #F7B267;
+    object-fit: cover;
+    object-position: center;
+}
+
+.btn {
+    margin: 0 100px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    color: var(--color-primary);
+    border: 0.125rem solid var(--color-primary);
+    background: unset;
+    border-radius: 5rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-transform: uppercase;    
+    transition: 0.5s all ease;
+    box-shadow: 0 0.5rem .5rem #0006; 
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    border-color: #F7B267;
+    background-color: #F7B267;
+    color: var(--color-primary);
+}
 
 .rodape {
+    margin-top: 1rem;
     background-color: #F7B267;
 }
 
 .logo__rodape {
     display: flex;
-    position: relative;
+    align-items: center ;
     justify-content: center;
     font-weight: 500;
     text-transform: uppercase;
     color: #F25C54;
+    font-size: max(8px, 1vw);
 }
+
+.logo__form {
+    
+    display: flex;
+    font-size: max(8px, 1vw);
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    color: #F4845F ;
+}
+
+
 
 @media screen and (max-width:900px) {
 
@@ -197,9 +268,4 @@
     bottom: auto;
     left: auto;
     color: #FFF;
-}
-
-.logo__rodape {
-    margin: 0;
-    font-size: 10px;
 }
