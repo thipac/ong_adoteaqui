@@ -91,34 +91,78 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
 .slide__copy {
     position: absolute;
-    top: 10rem;
-    left: 60vw;
-    border-radius: 10px;
-    text-transform: uppercase;
-    color: #F25C54;
-    margin-right: 5px;
+    top: 6rem;
+    left: 65vw; 
+
 }
 
-.slide__copy h2 {
+.logo__slide {
     color: #F4845F;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: min(40px, 5vw);
     letter-spacing: 0.1rem ;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.slide__copy p {
+    text-transform: uppercase;
+    font-size: min(16px, 3vw);
+    color: #F25C54;
+    margin-right: 5px;
+    font-weight: 700;
 }
 
 .icon {
-    font-size: 40px;
+    font-size: max(30px, 2vw);
 }
 
 .slide__copy p {
     letter-spacing: 0.2rem;
     font-weight: 700;
 }
+
+.counter__container ul{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: 300;
+    
+}
+
+.counter__container h3 {
+    font-size: max(1.750rem, 5vw);
+}
+
+.counter__container small{
+    
+    font-size: max(1rem, 2vw);
+}
+
+.counter--center {
+    margin-left: 60px;
+    font-size: 1.954rem;
+}
+
+
+.titulo {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    color: #F7B267;
+    text-transform: uppercase;
+    font-size: max(24);
+}
+
 
 .rodape {
     background-color: #F7B267;
@@ -133,7 +177,7 @@
     color: #F25C54;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
 
 .logo {
     display: none;
@@ -148,11 +192,11 @@
     margin: 0;
 }
 
-.slide__copy{
+.slide__copy {
     inset: absolute;
     bottom: auto;
     left: auto;
-    color: #fff;
+    color: #FFF;
 }
 
 .logo__rodape {
